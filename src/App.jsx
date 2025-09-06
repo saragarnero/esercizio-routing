@@ -19,7 +19,7 @@ function App() {
     />
       <Route path='/Contact' element={<Contact/>} 
     />
-      <Route path='/About/:id/:nome' element={<About/>} 
+      <Route path='/About/:id/' element={<About/>} 
     />
     </Routes>
   </BrowserRouter>
