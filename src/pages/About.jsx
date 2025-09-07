@@ -13,7 +13,8 @@ function About(){
 
 return (
     <div>
-        <h1>welcome to the About page:ID --{params.id} <br/>
+        <h1>welcome to the About page: ID --{params.id}  <br/>
+            <br/>
             NOME: {user?.name}
             <br/>
             EMAIL: {user?.email}
