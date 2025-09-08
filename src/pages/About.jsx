@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import users from "../data/user.json";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
 
 function About(){
     const params= useParams();
@@ -22,6 +25,7 @@ return (
              <br/>
             CITTÀ: {user?.city}
         </h1>
+        <Button variant="contained">Clicca qui</Button>
     </div>
 )
 }
