@@ -1,6 +1,6 @@
 .title{
     color:rgb(255, 0, 157);
-    font-size: 1.em;
+    font-size: 20px;
     margin:0;
 }
 
@@ -9,7 +9,7 @@
     border-radius: 8px;
     padding: 16px;
     margin:10px;
-    max-width:50px;
+    max-width:50px;    
 }
 
 .id{
