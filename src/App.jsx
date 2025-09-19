@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Exercise from './pages/Exercise'
 import Quiz from './pages/Quiz';
-
+import SearchPages from "./pages/SearchPages";
 
 function App() {
   
@@ -26,6 +26,8 @@ function App() {
     />
 
     <Route path='/Quiz' element={<Quiz/>} 
+    />
+    <Route path='/cerca' element={<SearchPages/>} 
     />
     </Routes>
   </BrowserRouter>

@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Index from "./Index";
 import { useState } from "react";
 import Button from "../components/Button";
+import Alert from '@mui/material/Alert';
 
 function Quiz() {
   const [pokemonId, setPokemonId] = useState([]);
-  const[putenggio,setPunteggio]= useState(0);
+  const[punteggio,setPunteggio]= useState(0);
+  const[alertype,setAlerType]= useState(0);
 
   function generaNumeri() {
     let ArrayId = [];
@@ -17,20 +19,27 @@ function Quiz() {
 
   useEffect(() => {
     generaNumeri();
-  }, [putenggio]);
+  }, [punteggio]);
+
  function controllaRisposta(id){
-    if (pokemonId[2]===id){
-        setPunteggio(putenggio+1);
+    if (punteggio===id){
+        setPunteggio(punteggio+1);
     }
+    else
+    setPunteggio(punteggio-2);
+  
  }
   return (
     <>
       <h1>La pagina dei quiz</h1>
-      <p>il tuo punteggio {putenggio}</p>
+      <p>il tuo punteggio {punteggio}</p>
       <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+ pokemonId[2]+".png"}/>
       {pokemonId.map((item) => {
         return <Button id={item}onClick={()=>controllaRisposta(item)}></Button>;
       })}
+
+      <Alert severity="success">Bravo,hai fatto tutto  giusto!!! </Alert>
+      <Alert severity="error">Hai sbagliato!!</Alert>
     </>
   );
 }
